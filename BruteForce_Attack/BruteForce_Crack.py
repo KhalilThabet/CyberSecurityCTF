@@ -24,7 +24,6 @@ def verif(prefix):
 counter = 0
 mini = verif(prefix)
 while(verif(prefix)):
-    print(prefix)
     temp = prefix
     for i in range(1, len(tab)):
         temp = temp[:counter] + tab[i] + temp[counter + 1:]
@@ -34,4 +33,3 @@ while(verif(prefix)):
     counter = (counter+1)%5
 
     print(prefix)
-    print(verif(prefix))

@@ -45,3 +45,7 @@ while(verif(prefix)):
     print(prefix)
     print(verif(prefix))
 ```
+
+**Result**
+
+![alt text](ScreenShot.png)
