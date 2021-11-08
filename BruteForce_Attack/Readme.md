@@ -46,6 +46,6 @@ while(verif(prefix)):
     print(verif(prefix))
 ```
 
-    Result
+    Result ↓ ↓
         
-|   |  ![alt text](ScreenShot.png)
+![alt text](ScreenShot.png)
