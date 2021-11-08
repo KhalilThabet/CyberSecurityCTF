@@ -1,10 +1,3 @@
-# BruteForce Crack
-
-
-We were given a source code of how the flag was encoded. 
-
-
-```python
 #!/usr/bin/env python3
 import string
 from Crypto.Util.number import *
@@ -12,13 +5,11 @@ from Crypto.Util.number import *
 flag = b'CSI{?????}'
 
 k = 0x5a78cf727b0b33b6d9e21ff92c30fe0e68a025f2887c97429e244d2e01
-
 tab = list(string.ascii_lowercase + string.ascii_uppercase)
 for i in range(1,10):
     tab.append(chr(i + ord('0')))
 
-prefix = "00000" #The FLAG HERE
-
+prefix = "00000"
 def verif(prefix):
     string = "CSI{" + prefix +  "}"
     flag = bytes(string,'utf-8')
@@ -32,16 +23,15 @@ def verif(prefix):
 
 counter = 0
 mini = verif(prefix)
-
 while(verif(prefix)):
+    print(prefix)
     temp = prefix
     for i in range(1, len(tab)):
         temp = temp[:counter] + tab[i] + temp[counter + 1:]
         if(mini>min(mini,verif(temp))):
             mini = verif(temp)
             prefix = temp
-    counter = (counter+1) % 5
+    counter = (counter+1)%5
 
     print(prefix)
     print(verif(prefix))
-```
