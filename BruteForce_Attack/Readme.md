@@ -1,4 +1,4 @@
-# BruteForce Crack Using Gradient descentgra
+# BruteForce Crack Using Gradient descent
 
 
 We were given a source code of how the flag was encoded. 
